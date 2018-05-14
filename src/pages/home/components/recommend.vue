@@ -2,7 +2,7 @@
 <div class="datag">
   <div class="title">热门推荐</div>
   <ul>
-    <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+    <li class="item border-bottom" v-for="item of list" :key="item.id">
       <img :src="item.imgUrl" alt="" class="item-img">
       <div class="item-info">
         <p class="item-title">{{item.title}}</p>
@@ -17,29 +17,8 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data () {
-    return {
-      recommendList: [
-        {
-          id: '0001',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1805/ed/edd6ad7136773cb1a3.water.jpg_200x200_60b49263.jpg',
-          title: '深圳之窗',
-          desc: '不出国游遍世界'
-        },
-        {
-          id: '0002',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1805/ed/edd6ad7136773cb1a3.water.jpg_200x200_60b49263.jpg',
-          title: '深圳之窗',
-          desc: '不出国游遍世界'
-        },
-        {
-          id: '0003',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1805/ed/edd6ad7136773cb1a3.water.jpg_200x200_60b49263.jpg',
-          title: '深圳之窗',
-          desc: '不出国游遍世界'
-        }
-      ]
-    }
+  props: {
+    list: Array
   }
 }
 </script>
