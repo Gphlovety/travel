@@ -2,7 +2,9 @@
   <div class="header">
     <div class="header-left"><div class="iconfont">&#xe624;</div></div>
     <div class="header-input">输入城市/景点/游玩主题</div>
-    <div class="header-right">{{this.city}}</div>
+    <router-link to="/city">
+      <div class="header-right">{{this.city}}</div>
+    </router-link>
   </div>
 </template>
 
@@ -19,7 +21,7 @@ export default {
   @import '~styles/varibles.styl'
   .header
     display: flex
-    line-height: .86rem
+    line-height: $headerHeight
     background: $bgColor
     color: #fff
     .header-left
@@ -44,6 +46,7 @@ export default {
     .header-right
       width: 1.24rem
       text-align: center
+      color: #fff
       &:after
         font-family: "iconfont"
         content: '\e64a'
